@@ -11,15 +11,14 @@ import RoomBookingSystem.Menu;
 public class RoomManager {
 
 	public void loadRooms() {
-		//Create a scanner, fileName called hotelrooms.txt which will read the data inside it.
-		Scanner scan = new Scanner(System.in);
-		String fileName = "hotelrooms.txt";
+		//Create a scanner, fileName called rooms.txt which will read the data inside it.
+		String fileName = "rooms.txt";
 		FileReader file;
-		// Using trycatch to debug error if the file hotelrooms.txt does not exist 
+		// Using trycatch to debug error if the file rooms.txt does not exist 
 		try {
 			file = new FileReader(fileName);
 			Scanner read = new Scanner(file);
-			// Create a while loop to iterate through hotelrooms.txt  
+			// Create a while loop to iterate through rooms.txt  
 			while(read.hasNextLine()) {
 				// Reads next line and stores it into the String line
 				String line = read.nextLine();
@@ -42,7 +41,7 @@ public class RoomManager {
 	//use trycatch method in case .txt file does not exist, and can highlight the issue
 	public void saveRooms() {
 		try {
-			PrintStream out = new PrintStream(new FileOutputStream("hotelrooms.txt"));		
+			PrintStream out = new PrintStream(new FileOutputStream("rooms.txt"));		
 			
 			System.setOut(out);
 			
