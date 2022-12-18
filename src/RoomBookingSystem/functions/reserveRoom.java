@@ -80,7 +80,7 @@ public class reserveRoom {
 	private static boolean reserveRoomBalcony(Scanner scan) {
 		System.out.println("Would you like a Balcony for the room");
 		String balcony = scan.nextLine();
-		switch(balcony) {
+		switch(balcony.toLowerCase()) {
 		case "yes":			
 			return true;
 		case "no":
@@ -95,7 +95,7 @@ public class reserveRoom {
 	private static boolean reserveRoomLongue(Scanner scan) {
 		System.out.println("Would you like a longue for the room");
 		String longue = scan.nextLine();
-		switch(longue){
+		switch(longue.toLowerCase()){
 		case "yes":			
 			return true;
 		case "no":
@@ -141,7 +141,8 @@ public class reserveRoom {
 		
 		
 		Menu.roomList.get(roomnumber).seteMail(email);
-		System.out.println("You have succesffuly booked a room! thank you.");
+		System.out.println("You have successfully booked a room! Thank you.");
+		System.out.println("Press enter to return to the menu..");
 		scan.nextLine();
 		Menu.menu(scan);
 		
@@ -176,7 +177,7 @@ public class reserveRoom {
 		Room bestMatchRoom = Menu.roomList.get(bestMatchNumber);
 		
 		System.out.println("Your best option is room " + bestMatchRoom.getRoomNum() + " and has " + bestMatch + "/4 condidtions correct");
-		System.out.println(" Would you like to continue to book room " + bestMatchRoom.getRoomNum());
+		System.out.println(" Would you like to continue to book room " + bestMatchRoom.getRoomNum() + "?");
 		System.out.println(" Room Type: " + bestMatchRoom.getRoomType());
 		System.out.println(" Price: £" + bestMatchRoom.getRoomPrice());
 		System.out.println(" Balcony: " + bestMatchRoom.getHasBalcony());
@@ -190,7 +191,7 @@ public class reserveRoom {
 			bookRoom(scan, bestMatchRoom.getRoomNum());
 			return;
 		case "no":
-			System.out.println("Please try again later!");
+			System.out.println("You have opt out!  Press enter to return to the menu..");
 			scan.nextLine();
 			Menu.menu(scan);
 			return;
