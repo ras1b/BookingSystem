@@ -21,7 +21,7 @@ public class cancelRoom {
 				System.out.println(" ");
 				System.out.println(" Email found!");
 				System.out.println("Please confirm the room number you want to cancel");
-				conformRoomNumber(scan, email);
+				confirmRoomNumber(scan, email);
 				return;
 			}
 		}		
@@ -30,7 +30,7 @@ public class cancelRoom {
 		cancelRoom(scan);
 	}
 	
-	private static void conformRoomNumber(Scanner scan, String email) {
+	private static void confirmRoomNumber(Scanner scan, String email) {
 
 		String roomnumber = scan.nextLine();
 		Room room;
@@ -38,13 +38,13 @@ public class cancelRoom {
 			room = Menu.roomList.get(Integer.parseInt(roomnumber));
 		}catch(Exception e) {
 			System.out.println("Invalid option, please try again");
-			conformRoomNumber(scan, email);
+			confirmRoomNumber(scan, email);
 			return;
 		}
 		
 		if(room == null) {
 			System.out.println("Invalid option, please try again");
-			conformRoomNumber(scan, email);
+			confirmRoomNumber(scan, email);
 			return;
 		}
 		

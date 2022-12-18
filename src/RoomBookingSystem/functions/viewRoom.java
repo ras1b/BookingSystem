@@ -28,7 +28,7 @@ public class viewRoom {
 				System.out.println("Email found");
 				System.out.println(" Please enter room number linked to email");
 				room = rooms;
-				conformRoomNumber(scan, room);
+				confirmRoomNumber(scan, room);
 				return;
 			}
 		}
@@ -39,20 +39,20 @@ public class viewRoom {
 	}
 	
 	
-	private static void conformRoomNumber(Scanner scan, Room room) {
+	private static void confirmRoomNumber(Scanner scan, Room room) {
 
 		String roomnumber = scan.nextLine();
 		try {
 			room = Menu.roomList.get(Integer.parseInt(roomnumber));
 		}catch(Exception e) {
 			System.out.println("Invalid option please try again");
-			conformRoomNumber(scan, room);
+			confirmRoomNumber(scan, room);
 			return;
 		}
 		
 		if(room == null) {
 			System.out.println("Invalid option please try again");
-			conformRoomNumber(scan, room);
+			confirmRoomNumber(scan, room);
 			return;
 		}
 		
