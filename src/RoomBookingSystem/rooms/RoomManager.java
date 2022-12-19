@@ -39,6 +39,8 @@ public class RoomManager {
 	}
 	//To save room reservations and cancellations in .txt file. Overwrites existing data with email (free or email)
 	//use trycatch method in case .txt file does not exist, and can highlight the issue
+	//Data is saved when user exists application using Menu option Q
+	
 	public void saveRooms() {
 		try {
 			PrintStream out = new PrintStream(new FileOutputStream("rooms.txt"));		

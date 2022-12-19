@@ -41,6 +41,7 @@ public class Menu {
 				viewRoom.viewRoomMain(scan);
 				return pick;
 			case "q":
+				System.out.println("Data saved..");
 				System.out.println("Successfully closed!");
 				RoomManager roomManager = new RoomManager();
 				roomManager.saveRooms();
