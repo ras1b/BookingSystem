@@ -8,13 +8,13 @@ import RoomBookingSystem.rooms.Room;
 public class cancelRoom {
 
 	
-	public static void cancelRoom(Scanner scan) {
+	public static void cancelRooms(Scanner scan) {
 		System.out.println("- - Cancel Reservation - -");
 		System.out.println(" ");
 		System.out.println(" To get started, please enter the email used for booking");
 		
 		String email = scan.nextLine();
-		if(!email.contains("@")) { cancelRoom(scan); return;}
+		if(!email.contains("@")) { cancelRooms(scan); return;}
 		
 		for(Room rooms : Menu.roomList.values()) {
 			if(rooms.eMail.equalsIgnoreCase(email)) {
@@ -27,7 +27,7 @@ public class cancelRoom {
 		}		
 		System.out.println(" ");
 		System.out.println(" Email could not be found, please try again");
-		cancelRoom(scan);
+		cancelRooms(scan);
 	}
 	
 	private static void confirmRoomNumber(Scanner scan, String email) {
@@ -52,6 +52,7 @@ public class cancelRoom {
 		if(room.geteMail().equalsIgnoreCase(email)) {
 			System.out.println("Room found! Reservation has been cancelled thank you.");
 			System.out.println(" ");
+			System.out.println("Press Enter to return to the menu..");
 			room.seteMail("free");
 			scan.nextLine();
 			Menu.menu(scan);

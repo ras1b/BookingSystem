@@ -33,7 +33,7 @@ public class Menu {
 	
 	//Case 2 - Cancelling a room (Switch Case)			
 			case "2":
-				cancelRoom.cancelRoom(scan);
+				cancelRoom.cancelRooms(scan);
 				return pick;
 				
 	//Case 3 - View room reservations (Switch Case)				
@@ -69,7 +69,7 @@ public class Menu {
 
 		menu(scan);						
 
-		
+		//closing scanner to prevent memory leaks
 		scan.close();
 	}
 

@@ -2,7 +2,7 @@ package RoomBookingSystem.rooms;
 
 public class Room {
 
-	// Properties
+	// Properties of Room
 	public int roomNum;
 	public String roomType;
 	public Double roomPrice;
@@ -10,6 +10,8 @@ public class Room {
 	public Boolean hasLounge;
 	public String eMail;
 	
+	//Room constructor , using room format with its datatype
+	//Using this() method to eliminate the confusion between class attributes and parameters with the same name
 	public Room(int num, String type, Double price, Boolean balcony, Boolean lounge, String email) {
 		this.roomNum = num;
 		this.roomType = type;
@@ -19,7 +21,8 @@ public class Room {
 		this.eMail = email;
 	}
 
-	// Methods/Functions
+	// Methods/Functions for Room
+	//Use the getter and setter method to set rooms "free or email" later and to get the room data/view reservations
 	public int getRoomNum() {
 		return roomNum;
 	}

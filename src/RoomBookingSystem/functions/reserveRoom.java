@@ -142,7 +142,7 @@ public class reserveRoom {
 		
 		Menu.roomList.get(roomnumber).seteMail(email);
 		System.out.println("You have successfully booked a room! Thank you.");
-		System.out.println("Press enter to return to the menu..");
+		System.out.println("Press Enter to return to the menu..");
 		scan.nextLine();
 		Menu.menu(scan);
 		
@@ -191,7 +191,7 @@ public class reserveRoom {
 			bookRoom(scan, bestMatchRoom.getRoomNum());
 			return;
 		case "no":
-			System.out.println("You have opt out!  Press enter to return to the menu..");
+			System.out.println("You have opt out!  Press Enter to return to the menu..");
 			scan.nextLine();
 			Menu.menu(scan);
 			return;
